@@ -15,10 +15,10 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  * @package   BreadcrumbTrail
- * @version   1.1.0
- * @author    Justin Tadlock <justin@justintadlock.com>
+ * @version   1.2.0
+ * @author    Unity Digital Agency
  * @copyright Copyright (c) 2008 - 2017, Justin Tadlock
- * @link      https://themehybrid.com/plugins/breadcrumb-trail
+ * @link      https://github.com/unitymakesus/breadcrumb-trail
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -205,7 +205,7 @@ class Breadcrumb_Trail {
 				// Wrap the item with its itemprop.
 				$item = ! empty( $matches )
 					? preg_replace( '/(<a.*?)([\'"])>/i', '$1$2 itemprop=$2item$2>', $item )
-					: sprintf( '<span itemprop="item">%s</span>', $item );
+					: $item;
 
 				// Add list item classes.
 				$item_class = 'trail-item';
